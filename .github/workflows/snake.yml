@@ -21,8 +21,8 @@ jobs:
       - name: Push Snake
         uses: ad-m/github-push-action@v0.6.0
         with:
-          branch: output       # شاخه‌ای که انیمیشن توش ساخته میشه
-          folder: dist         # مسیر فایل svg
+          branch: output       # شاخه خروجی
+          directory: dist      # ← به جای folder، باید directory باشه
           force: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
