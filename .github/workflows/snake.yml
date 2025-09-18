@@ -22,7 +22,6 @@ jobs:
         uses: ad-m/github-push-action@v0.6.0
         with:
           branch: output       # شاخه خروجی
-          directory: dist      # ← به جای folder، باید directory باشه
+          directory: dist      # مسیر فایل svg
           force: true
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
