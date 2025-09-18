@@ -18,10 +18,8 @@ jobs:
           github_user_name: MohammadMahdiRazmi
           outputs: dist/snake.svg
 
-      - name: Push Snake
+      - name: Push changes
         uses: ad-m/github-push-action@v0.6.0
         with:
-          branch: output       # شاخه خروجی
-          directory: dist      # مسیر فایل svg
-          force: true
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: output
