@@ -1,0 +1,28 @@
+name: Generate Snake
+
+on:
+  schedule:
+    - cron: "0 0 * * *"  # هر 24 ساعت اجرا میشه
+  workflow_dispatch:       # امکان اجرای دستی هم هست
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Generate Snake
+        uses: Platane/snk@v3
+        with:
+          github_user_name: MohammadMahdiRazmi
+          outputs: dist/snake.svg
+
+      - name: Push Snake
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          branch: output       # شاخه‌ای که انیمیشن توش ساخته میشه
+          folder: dist         # مسیر فایل svg
+          force: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
