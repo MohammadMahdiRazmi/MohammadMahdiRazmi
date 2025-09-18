@@ -41,8 +41,8 @@
 
 ###
 
-<img src="https://raw.githubusercontent.com/MohammadMahdiRazmi/MohammadMahdiRazmi/output/snake.svg
-" alt="Snake animation" />
+<img src="https://raw.githubusercontent.com/MohammadMahdiRazmi/MohammadMahdiRazmi/output/snake.svg" alt="Snake animation" />
+
 
 ###
 
